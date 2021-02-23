@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<Title>Firebase Login</Title>
+
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+
+		<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+
+		<!--↓For fonts↓-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+		<script>
+			var firebaseConfig = {
+					apiKey: "AIzaSyCGrKuBVGUGSEAvXmfHO28K7sig92ItGo4",
+					authDomain: "hwmadjontron.firebaseapp.com",
+					databaseURL: "https://hwmadjontron-default-rtdb.firebaseio.com",
+					projectId: "hwmadjontron",
+					storageBucket: "hwmadjontron.appspot.com",
+					messagingSenderId: "1050665577554",
+					appId: "1:1050665577554:web:7edfb0d423b32f7e14438b",
+					measurementId: "G-SJZ0K0MGEN"
+				};
+
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+		</script>
+
+		<link rel="stylesheet" href="style.css">
+
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+
+		<h1>Senior Project</h1>
+
+		<img src='milonasgod.png', style='width:10%'></img>
+
+		<!--↓Login Div↓-->
+		<div class="main-div">
+			<h3>Login<h3>
+			
+			<input type="email" id="email" placeholder="Email...">
+			<input type="password" id="password" placeholder="Password..." style="font: small-caption">
+			
+			<img src="eye-con.png" width="18%"></img>
+			<input type="checkbox" onclick="pwdToggle()">
+			
+			<button onclick="login();test()" >Login to Account</button>
+      		<p> Don't have an account?</p>
+
+			<p><a href="register.html">Register an Account</a></p>
+			<p><a href="mentorRegister.html">[temp]Mentor Registration</a></p>
+			<p><a href="request.html">[temp]Mentor Request Form</a></p>
+			<p><a href="profile.html">[temp]Profile</a></p>
+			<p><a href="experimental.html">[temp]Experiment</a></p>
+
+		</div>
+	</body>
+</html>

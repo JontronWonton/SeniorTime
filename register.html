@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<Title>Firebase Login</Title>
+
+		<!-- Firebase JS SDK -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+		
+
+		<!--↓For fonts↓-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  		
+	</head>
+	
+	<body>
+		<script type="text/javascript" src="script.js"></script>
+		<script>
+      function test(){
+        console.log("[TEST]");
+      }
+		</script>
+		
+		<div class="main-div">
+			<h3>Create Login</h3>
+			<p>Please enter the requested information below.<p>
+			<form>
+				<input type="text" id="firstname" placeholder="First name..."></input>
+				<input type="text" id="lastname" placeholder="Last name..."></input>
+        		<input type="text" id="sID" placeholder="Student ID..."></input>
+				<!-- Use regex to validate input -->
+				<input type="text" id="email" placeholder="Email...">
+				<input type="text" id="password" placeholder="Password...">
+        		<textarea id="bio" placeholder="Bio..." rows="4" cols="150" maxlength=150></textarea>
+			</form>
+			
+			<button onclick="register()">Register</button>
+			<button onclick="test()" id="insert">Insert</button>
+			<button id="Read">Read</button>
+			<button id="Delete">Delete</button>
+			<button id="Update">Update</button>
+
+			<p><a href="index.html" onclick="test()">Cancel</a></p>
+		</div>
+	</body>
+</html>

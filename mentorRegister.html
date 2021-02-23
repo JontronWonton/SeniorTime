@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<Title>Firebase Login</Title>
+
+	<!-- Firebase JS SDK -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js">
+	</script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js">
+	</script>
+
+	<script>
+		var firebaseConfig = {
+					apiKey: "AIzaSyCGrKuBVGUGSEAvXmfHO28K7sig92ItGo4",
+					authDomain: "hwmadjontron.firebaseapp.com",
+					databaseURL: "https://hwmadjontron-default-rtdb.firebaseio.com",
+					projectId: "hwmadjontron",
+					storageBucket: "hwmadjontron.appspot.com",
+					messagingSenderId: "1050665577554",
+					appId: "1:1050665577554:web:7edfb0d423b32f7e14438b",
+					measurementId: "G-SJZ0K0MGEN"
+				};
+
+				firebase.initializeApp(firebaseConfig);
+				firebase.analytics();
+	</script>
+
+	<!--↓For fonts↓-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js">
+	</script>
+</head>
+
+<body>
+	<div class="main-div">
+		<h3>Mentor Registration Form</h3>
+		<p>Please fill out the application for the mentorship program.<p>
+				<form>
+					<input type="text" id="mentorSubjects" placeholder="what subjects would you like to tutor?"></input>
+        <br><p>Describe yourself in three words</p>
+				<input type="text" id="word1"></input>
+        <input type="text" id="word2"></input>
+        <input type="text" id="word3"></input>
+        <br><p>Please describe your learning process and how you study/prepare for classes.</p>
+        <textarea id="learningProcess" rows="8" cols=250 maxlength=150 oninput="countWord()"></textarea>
+        <wc> <span id="show">0</span>/150 </wc> 
+
+        <script> 
+            function countWord() { 
+      
+                // Get the input text value 
+                var words = document 
+                    .getElementById("learningProcess").value; 
+      
+                // Initialize the word counter 
+                var count = 0; 
+      
+                // Split the words on each 
+                // space character  
+                var split = words.split(' '); 
+      
+                // Loop through the words and  
+                // increase the counter when  
+                // each split word is not empty 
+                for (var i = 0; i < split.length; i++) { 
+                    if (split[i] != "") { 
+                        count += 1; 
+                    } 
+                } 
+      
+                // Display it as output 
+                document.getElementById("show") 
+                    .innerHTML = count; 
+            } 
+        </script>
+			</form>
+      		
+			
+
+			<p><a href="register.html">Cancel</a></p>
+		</div>
+	</body>
+</html>
